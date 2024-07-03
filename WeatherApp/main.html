@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script defer src="main.js"></script>
+    <style>
+        body
+        {
+            size:50%;
+            box-sizing: border-box;
+            background-color: rgb(51, 50, 50);
+        }
+        #outside
+        {
+            color:white;
+            font-family: Montserrat;
+            margin: 0 auto;
+            margin-top:100px;
+            width: 40%;
+            min-width:fit-content;
+            height: 650px;
+            background: linear-gradient(to right, #8bdae7, #3ef3f3);
+            box-shadow: 0 0 45px rgba(59, 240, 216, 0.5); 
+        }
+        #search-container
+        {
+            display:flex;
+            justify-content: center;
+            gap:20px;
+            padding:20px;
+            height: 45px;
+        }
+        #search-container span
+        {
+            font-family: Honk;
+            
+            font-size:40px;
+        }
+        #search-container input
+        {
+            padding-left: 20px;
+            border-radius: 50px;
+            background-color: black;
+            border:none;
+            font-size:15px;
+            color:white;
+        }
+        #search-container button
+        {
+            border-radius: 50px;
+            width:40px;
+            background-color: aliceblue;
+            border:none;
+            cursor:pointer;
+        }
+
+        #search-container button:hover
+        {
+            background-color: rgb(200, 207, 212);
+        }
+        #search-container button img
+        {   
+            
+            height:25px;
+        }
+
+        #midcontainer
+        {
+            font-size:40px;
+            text-align: center;
+        }
+
+
+        #bottomcontainer
+        {
+            gap:20px;
+            position: relative;
+            font-size:19px;
+            height:100px;
+            padding:10px;
+            display:flex;
+            justify-content: space-around;
+        }
+        #humidity
+        {
+            align-items: center;
+            display:flex;
+            gap: 20px;;
+        }
+
+        #windSpeed
+        {
+            align-items: center;
+            display:flex;
+            gap:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outside">
+        <div id="search-container">
+            <span>#24</span>
+            <input type="text" name="cityName" id="city" placeholder="Enter city name" spellcheck="false">
+            <button onclick="getData()">
+            <img src="search.png" alt="" id="search-button">
+            </button>
+        </div>
+
+        <div id="midcontainer">
+            <img src="clouds.png">
+            <p id="cDegree">0°C</p>
+            <p id="cName"></p>
+        </div>
+
+        <div id="bottomcontainer">
+            <div id="humidity">
+                <img src="humidity.png" >
+                <p id="huminfo">100%<br>Humidity</p>
+            </div>
+            <div id="windSpeed">
+                <img src="wind.png">
+                <p id="wininfo">1.85 km/h<br>Wind Speed</p>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
